@@ -1,7 +1,7 @@
 {
   "name": "nx-linaria",
   "description": "A Nx Webpack plugin for enabling Linaria loader for babel projects.",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "main": "./index.js",
   "exports": "./index.js",
   "repository": "https://github.com/GraxMonzo/nx-linaria.git",
