@@ -1,6 +1,6 @@
 {
   "name": "nx-linaria",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "./index.js",
   "exports": "./index.js",
   "repository": "https://github.com/GraxMonzo/nx-linaria.git",
