@@ -1,6 +1,13 @@
 {
   "name": "nx-linaria",
   "description": "A Nx Webpack plugin for enabling Linaria loader for babel projects.",
+  "keywords": [
+    "nx",
+    "webpack",
+    "react",
+    "babel",
+    "linaria"
+  ],
   "version": "0.1.0",
   "main": "./index.js",
   "exports": "./index.js",
