@@ -25,6 +25,11 @@ function addLinaria(config) {
         },
       ],
     };
+  } else {
+    throw new Error(
+      `NX Linaria: No \`babel-loader\` found. Make sure you have \`babel\` compiler selected in your \`project.json\`\n
+      https://nx.dev/packages/webpack/executors/webpack#compiler`
+    );
   }
 }
 
