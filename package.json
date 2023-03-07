@@ -11,6 +11,7 @@
   "version": "0.1.1",
   "main": "./index.js",
   "exports": "./index.js",
+  "types": "./index.d.ts",
   "repository": "https://github.com/GraxMonzo/nx-linaria.git",
   "author": "Beka <bekzatsmov2@gmail.com>",
   "license": "MIT",

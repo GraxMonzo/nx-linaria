@@ -34,8 +34,7 @@ function addLinaria(config) {
 }
 
 /**
- * @param {WithReactOptions} pluginOptions
- * @returns {NxWebpackPlugin}
+ * @returns {import('@nrwl/webpack').NxWebpackPlugin}
  */
 function withLinaria() {
   /**
@@ -43,7 +42,7 @@ function withLinaria() {
    * @param {import('@nrwl/webpack').NxWebpackExecutionContext}  context
    * @returns {import('webpack').Configuration}
    */
-  return function configure(config, context) {
+  return function configure(config) {
     if (processed.has(config)) return config;
 
     addLinaria(config);
