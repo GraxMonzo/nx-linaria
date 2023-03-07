@@ -8,7 +8,7 @@ function addLinaria(config) {
       rule.loader?.toString().includes("babel-loader")
   );
 
-  if (babelLoaderIndex) {
+  if (babelLoaderIndex !== -1) {
     const babelLoader = config.module.rules[babelLoaderIndex];
     const babelLoaderClone = (({ test, exclude, ...o }) => o)(babelLoader);
 
