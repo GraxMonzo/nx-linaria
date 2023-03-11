@@ -45,9 +45,9 @@ _Include Linaria's babel preset in `.babelrc`:_
       "@nrwl/react/babel",
       {
         "runtime": "automatic"
-      },
-      "@linaria"
-    ]
+      }
+    ],
+    "@linaria"
   ],
   "plugins": []
 }
