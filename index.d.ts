@@ -1,5 +1,5 @@
 import type { Configuration } from "webpack";
-import type { NxWebpackExecutionContext } from "@nrwl/webpack";
+import type { NxWebpackExecutionContext } from "@nx/webpack";
 
 /**
  * @returns {NxWebpackPlugin}

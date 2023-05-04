@@ -34,12 +34,12 @@ function addLinaria(config) {
 }
 
 /**
- * @returns {import('@nrwl/webpack').NxWebpackPlugin}
+ * @returns {import('@nx/webpack').NxWebpackPlugin}
  */
 function withLinaria() {
   /**
    * @param {import('webpack').Configuration}  config
-   * @param {import('@nrwl/webpack').NxWebpackExecutionContext}  context
+   * @param {import('@nx/webpack').NxWebpackExecutionContext}  context
    * @returns {import('webpack').Configuration}
    */
   return function configure(config) {

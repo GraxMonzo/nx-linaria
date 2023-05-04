@@ -19,14 +19,14 @@
     "release": "np --yolo --no-yarn"
   },
   "devDependencies": {
-    "@nrwl/webpack": "^15.8.5",
-    "np": "^7.6.3",
+    "@nx/webpack": "^16.0.3",
+    "np": "^7.7.0",
     "webpack": "^5.75.0"
   },
   "peerDependencies": {
-    "@nrwl/webpack": "^15.7.x"
+    "@nx/webpack": "^16.0.x"
   },
   "dependencies": {
-    "@linaria/webpack-loader": "^4.1.15"
+    "@linaria/webpack-loader": "^4.1.16"
   }
 }
