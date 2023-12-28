@@ -14,19 +14,17 @@
 Add the plugin to your workspace:
 
 ```
-npm i -D nx-linaria @linaria/core @linaria/react @linaria/babel-preset
+npm i -D nx-linaria @linaria/core @linaria/react @wyw-in-js/babel-preset
 ```
 
 _Compose the plugin in Webpack config:_
 
-```js
-//@ts-check
+```ts
+import { composePlugins, withNx } from "@nx/webpack";
+import { withReact } from "@nx/react";
+import { withLinaria } from "nx-linaria";
 
-const { composePlugins, withNx } = require("@nrwl/webpack");
-const { withReact } = require("@nrwl/react");
-const { withLinaria } = require("nx-linaria");
-
-module.exports = composePlugins(
+export default composePlugins(
   withNx(),
   withReact(),
   withLinaria(),
@@ -47,7 +45,7 @@ _Include Linaria's babel preset in `.babelrc`:_
         "runtime": "automatic"
       }
     ],
-    "@linaria"
+    "@wyw-in-js"
   ],
   "plugins": []
 }

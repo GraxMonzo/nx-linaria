@@ -4,3 +4,5 @@ Thumbs.db
 .DS_Store
 README.md
 docs/
+index.ts
+.parcel-cache

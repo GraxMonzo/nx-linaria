@@ -1,24 +1,26 @@
+import { Configuration, RuleSetRule } from "webpack";
+
 const processed = new Set();
 
-/** @param {import('webpack').Configuration} config */
-function addLinaria(config) {
-  const babelLoaderIndex = config.module?.rules?.findIndex(
+function addLinaria(config: Configuration) {
+  const rules = config.module?.rules as RuleSetRule[];
+  const babelLoaderIndex = rules?.findIndex(
     (rule) =>
       typeof rule !== "string" &&
-      rule.loader?.toString().includes("babel-loader")
+      (rule as RuleSetRule).loader?.toString().includes("babel-loader")
   );
 
-  if (babelLoaderIndex !== -1) {
-    const babelLoader = config.module.rules[babelLoaderIndex];
+  if (typeof babelLoaderIndex === "number" && babelLoaderIndex !== -1) {
+    const babelLoader = rules[babelLoaderIndex];
     const babelLoaderClone = (({ test, exclude, ...o }) => o)(babelLoader);
 
-    config.module.rules[babelLoaderIndex] = {
+    rules[babelLoaderIndex] = {
       test: babelLoader.test,
       exclude: babelLoader.exclude,
       use: [
         babelLoaderClone,
         {
-          loader: "@linaria/webpack-loader",
+          loader: "@wyw-in-js/webpack-loader",
           options: {
             sourceMap: config.mode === "development",
           },
@@ -33,16 +35,8 @@ function addLinaria(config) {
   }
 }
 
-/**
- * @returns {import('@nx/webpack').NxWebpackPlugin}
- */
-function withLinaria() {
-  /**
-   * @param {import('webpack').Configuration}  config
-   * @param {import('@nx/webpack').NxWebpackExecutionContext}  context
-   * @returns {import('webpack').Configuration}
-   */
-  return function configure(config) {
+export function withLinaria() {
+  return function configure(config: Configuration): Configuration {
     if (processed.has(config)) return config;
 
     addLinaria(config);
@@ -51,5 +45,3 @@ function withLinaria() {
     return config;
   };
 }
-
-module.exports = { withLinaria };

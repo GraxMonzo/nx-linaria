@@ -9,25 +9,31 @@
     "linaria"
   ],
   "version": "1.1.0",
-  "main": "./index.js",
-  "exports": "./index.js",
-  "types": "./index.d.ts",
+  "type": "module",
+  "source": "./index.ts",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "repository": "https://github.com/GraxMonzo/nx-linaria.git",
-  "author": "Beka <bekzatsmov2@gmail.com>",
   "author": "Bekzat Samatov <bekzatsmov2@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "build": "parcel build",
     "release": "np --yolo --no-yarn"
   },
   "devDependencies": {
-    "@nx/webpack": "^16.0.3",
-    "np": "^7.7.0",
-    "webpack": "^5.75.0"
+    "@nx/webpack": "^17.2.7",
+    "@parcel/packager-ts": "^2.10.3",
+    "@parcel/transformer-typescript-types": "^2.10.3",
+    "np": "^9.2.0",
+    "parcel": "^2.10.3",
+    "typescript": "^5.3.3",
+    "webpack": "^5.89.0"
   },
   "peerDependencies": {
-    "@nx/webpack": "^16.0.x"
+    "@nx/webpack": "^17.2.x",
+    "@linaria/core": "^6.x.x"
   },
   "dependencies": {
-    "@linaria/webpack-loader": "^4.1.16"
+    "@wyw-in-js/webpack-loader": "^0.2.2"
   }
 }
