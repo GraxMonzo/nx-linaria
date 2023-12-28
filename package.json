@@ -14,6 +14,7 @@
   "types": "./index.d.ts",
   "repository": "https://github.com/GraxMonzo/nx-linaria.git",
   "author": "Beka <bekzatsmov2@gmail.com>",
+  "author": "Bekzat Samatov <bekzatsmov2@gmail.com>",
   "license": "MIT",
   "scripts": {
     "release": "np --yolo --no-yarn"
