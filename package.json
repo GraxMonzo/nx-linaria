@@ -8,7 +8,7 @@
     "babel",
     "linaria"
   ],
-  "version": "2.0.0",
+  "version": "2.0.1",
   "type": "module",
   "source": "./index.ts",
   "main": "./dist/index.js",
